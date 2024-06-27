@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "client": "http-server -p 3001 ./client"
+    "client": "http-server -p 3002 ./client"
   },
   "dependencies": {
     "@types/node": "20.5.7",

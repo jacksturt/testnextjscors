@@ -74,11 +74,17 @@ export const POST = async (request: NextRequest) => {
   // Get JSON payload
   const data = await request.json();
   console.log("data", data);
+  const resp = await fetch("https://soldic.xyz/api/extension/sentenceParser", {
+    method: "POST",
+    body: JSON.stringify(data),
+  });
+  const data2 = await resp.json();
+  console.log("data2", data2);
 
   // Return Response
   return NextResponse.json(
     {
-      data,
+      data: data2,
     },
     {
       status: 200,

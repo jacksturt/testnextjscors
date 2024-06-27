@@ -9,14 +9,14 @@ const API_URL_PROD = "https://soldic.xyz/api/extension/sentenceParser";
 // ========================================================
 const requests = {
   GET: async (callback) => {
-    const response = await fetch(`${API_URL}`);
+    const response = await fetch(`${API_URL_LOCAL2}`);
     const data = await response.json();
     if (callback) {
       callback(data);
     }
   },
   POST: async (payload, callback) => {
-    const response = await fetch(`${API_URL}`, {
+    const response = await fetch(`${API_URL_LOCAL2}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
