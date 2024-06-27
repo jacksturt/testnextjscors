@@ -1,6 +1,6 @@
 // Config
 // ========================================================
-const API_URL = "https://testnextjscors.vercel.app/api";
+const API_URL = "https://testnextjscors.vercel.app/api/users";
 const API_URL_LOCAL2 = "http://localhost:3000/api/users";
 const API_URL_LOCAL = "http://localhost:3000/api/extension/sentenceParser";
 const API_URL_PROD = "https://soldic.xyz/api/extension/sentenceParser";
@@ -9,14 +9,14 @@ const API_URL_PROD = "https://soldic.xyz/api/extension/sentenceParser";
 // ========================================================
 const requests = {
   GET: async (callback) => {
-    const response = await fetch(`${API_URL_LOCAL2}`);
+    const response = await fetch(`${API_URL}`);
     const data = await response.json();
     if (callback) {
       callback(data);
     }
   },
   POST: async (payload, callback) => {
-    const response = await fetch(`${API_URL_LOCAL2}`, {
+    const response = await fetch(`${API_URL}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -22,7 +22,7 @@ const nextConfig = {
           // Allows for specific headers accepted (These are a few standard)
           {
             key: "Access-Control-Allow-Headers",
-            value: "Content-Type, Authorization",
+            value: "*",
           },
         ],
       },
