@@ -16,7 +16,7 @@ const requests = {
     }
   },
   POST: async (payload, callback) => {
-    const response = await fetch(`${API_URL_LOCAL}`, {
+    const response = await fetch(`${API_URL_LOCAL2}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
